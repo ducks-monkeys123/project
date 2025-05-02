@@ -1,7 +1,7 @@
 import { jsx, jsxs } from "react/jsx-runtime";
 import { PassThrough } from "node:stream";
 import { createReadableStreamFromReadable } from "@react-router/node";
-import { ServerRouter, useMatches, useActionData, useLoaderData, useParams, useRouteError, Meta, Links, ScrollRestoration, Scripts, Outlet, isRouteErrorResponse } from "react-router";
+import { ServerRouter, useMatches, useActionData, useLoaderData, useParams, useRouteError, Meta, Links, ScrollRestoration, Scripts, HashRouter, Outlet, isRouteErrorResponse } from "react-router";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { createElement } from "react";
@@ -97,10 +97,12 @@ function Layout({
   });
 }
 const root = withComponentProps(function App() {
-  return /* @__PURE__ */ jsxs("div", {
-    children: [/* @__PURE__ */ jsx("h1", {
-      children: "Hello there!"
-    }), /* @__PURE__ */ jsx(Outlet, {})]
+  return /* @__PURE__ */ jsx(HashRouter, {
+    children: /* @__PURE__ */ jsxs("div", {
+      children: [/* @__PURE__ */ jsx("h1", {
+        children: "Hello there!"
+      }), /* @__PURE__ */ jsx(Outlet, {})]
+    })
   });
 });
 const ErrorBoundary = withErrorBoundaryProps(function ErrorBoundary2({
@@ -160,7 +162,7 @@ const route2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   __proto__: null,
   default: scan
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/projectassets/entry.client-B8hJqc04.js", "imports": ["/projectassets/chunk-AYJ5UCUI-BJpQ5qTT.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/projectassets/root-BQmvPCa5.js", "imports": ["/projectassets/chunk-AYJ5UCUI-BJpQ5qTT.js", "/projectassets/with-props-BurUXKPG.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": "project", "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/projectassets/home-B8rZ3rOi.js", "imports": ["/projectassets/with-props-BurUXKPG.js", "/projectassets/chunk-AYJ5UCUI-BJpQ5qTT.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/scan": { "id": "routes/scan", "parentId": "root", "path": "project/scan", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/projectassets/scan-DcZ3-90c.js", "imports": ["/projectassets/with-props-BurUXKPG.js", "/projectassets/chunk-AYJ5UCUI-BJpQ5qTT.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/projectassets/manifest-a2e7ad3e.js", "version": "a2e7ad3e", "sri": void 0 };
+const serverManifest = { "entry": { "module": "/projectassets/entry.client-DfZYrTSd.js", "imports": ["/projectassets/chunk-AYJ5UCUI-ijg2eBgU.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/projectassets/root-Cnz73cy-.js", "imports": ["/projectassets/chunk-AYJ5UCUI-ijg2eBgU.js", "/projectassets/with-props-DnWIYMyJ.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": "project", "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/projectassets/home-DOtf1DK-.js", "imports": ["/projectassets/with-props-DnWIYMyJ.js", "/projectassets/chunk-AYJ5UCUI-ijg2eBgU.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/scan": { "id": "routes/scan", "parentId": "root", "path": "project/scan", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/projectassets/scan-wYtC81vz.js", "imports": ["/projectassets/with-props-DnWIYMyJ.js", "/projectassets/chunk-AYJ5UCUI-ijg2eBgU.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/projectassets/manifest-a093244d.js", "version": "a093244d", "sri": void 0 };
 const assetsBuildDirectory = "build/client";
 const basename = "/";
 const future = { "unstable_middleware": false, "unstable_optimizeDeps": false, "unstable_splitRouteModules": false, "unstable_subResourceIntegrity": false, "unstable_viteEnvironmentApi": false };
