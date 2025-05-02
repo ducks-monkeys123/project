@@ -1,1 +1,0 @@
-import{w as n}from"./with-props-CBXwCruZ.js";import{o}from"./chunk-AYJ5UCUI-CDxOV4f-.js";const e=n(function(){return o.jsx("div",{children:o.jsx("h1",{children:"Scan QR code"})})});export{e as default};
