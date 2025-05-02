@@ -1,1 +1,0 @@
-import{w as t}from"./with-props-DnWIYMyJ.js";import{o as e}from"./chunk-AYJ5UCUI-ijg2eBgU.js";function i({}){return[{title:"New React Router App"},{name:"description",content:"Welcome to React Router!"}]}const m=t(function(){return e.jsx("div",{children:e.jsx("h1",{children:"Home Page"})})});export{m as default,i as meta};
